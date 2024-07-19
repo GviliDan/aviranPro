@@ -10,7 +10,7 @@ import Footer from './components/common/Footer';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/aviranPro'>
       <Header />
 
       <main className='mt-[62px] md:mt-[85px]'>
