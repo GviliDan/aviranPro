@@ -18,13 +18,13 @@ function Header() {
   return (
     <>
       <header className='fixed top-0 left-0 right-0 bg-background shadow-md z-10'>
-        <button
+        <div
           onClick={() => navigate('/')}
           className='w-full h-[62px] md:h-[85px] flex justify-center items-center relative'
-          style={{ border: 'none', background: 'none', cursor: 'pointer' }}
+          style={{ cursor: 'pointer' }}
         >
           <h1 lang='en' className='text-2xl md:text-5xl font-medium text-title'>
-            Aviran rokache productions
+            Aviran Rokache Productions
           </h1>
           <button
             onClick={(e) => {
@@ -36,7 +36,7 @@ function Header() {
           >
             <IconHamburger className='h-8 w-8' />
           </button>
-        </button>
+        </div>
       </header>
       <DrawerMenu open={open} onClose={onClose} />
     </>

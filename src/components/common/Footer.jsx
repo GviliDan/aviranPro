@@ -5,37 +5,62 @@ import {
   faFacebook,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
+import { useNavigate } from 'react-router-dom';
 import aviranLogo from '../../assets/images/aviranLogo.png';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
     <footer className='text-title py-8 px-4'>
       {/* Desktop Footer */}
       <div className='hidden md:flex flex-col items-center justify-center'>
         <div className='flex items-center space-x-2'>
-          <a href='/about-us' className='hover:underline text-title'>
+          <span
+            onClick={() => handleNavigation('/about-us')}
+            className='hover:underline cursor-pointer text-title'
+          >
             ABOUT
-          </a>
+          </span>
           <span className='text-title'>|</span>
-          <a href='/working-process' className='hover:underline text-title'>
+          <span
+            onClick={() => handleNavigation('/working-process')}
+            className='hover:underline cursor-pointer text-title'
+          >
             WORKING PROCESS
-          </a>
+          </span>
           <span className='text-title'>|</span>
-          <a href='/projects' className='hover:underline text-title'>
+          <span
+            onClick={() => handleNavigation('/projects')}
+            className='hover:underline cursor-pointer text-title'
+          >
             PROJECTS
-          </a>
+          </span>
           <span className='text-title'>|</span>
-          <a href='/destinations' className='hover:underline text-title'>
+          <span
+            onClick={() => handleNavigation('/destinations')}
+            className='hover:underline cursor-pointer text-title'
+          >
             DESTINATIONS
-          </a>
+          </span>
           <span className='text-title'>|</span>
-          <a href='/gallery' className='hover:underline text-title'>
+          <span
+            onClick={() => handleNavigation('/gallery')}
+            className='hover:underline cursor-pointer text-title'
+          >
             GALLERY
-          </a>
+          </span>
           <span className='text-title'>|</span>
-          <a href='/contact-us' className='hover:underline text-title'>
+          <span
+            onClick={() => handleNavigation('/contact-us')}
+            className='hover:underline cursor-pointer text-title'
+          >
             CONTACT US
-          </a>
+          </span>
         </div>
         <div className='mt-4'>
           <img src={aviranLogo} alt='Logo' className='h-24' />
@@ -64,7 +89,7 @@ const Footer = () => {
           </a>
         </div>
         <p className='mt-4 text-center text-title'>
-          &copy; ALL RIGHTS RESERVED TO SKY PRODUCTIONS 2018-2021
+        ALL RIGHTS RESERVED TO AVIRAN ROKACHE PRODUCTION
         </p>
       </div>
 
@@ -95,15 +120,15 @@ const Footer = () => {
           </a>
         </div>
         <p className='mt-4 text-center text-title'>
-          &copy; ALL RIGHTS RESERVED TO SKY PRODUCTIONS 2018-2021
+          ALL RIGHTS RESERVED TO AVIRAN ROKACHE PRODUCTION
         </p>
         <div className='mt-4 text-center'>
-          <a href='/newsletter' className='block mb-2 hover:underline text-title'>
-            SIGN UP TO OUR NEWSLETTER
-          </a>
-          <a href='/contact-us' className='block hover:underline text-title'>
+          <span
+            onClick={() => handleNavigation('/contact-us')}
+            className='block hover:underline cursor-pointer text-title'
+          >
             CONTACT US
-          </a>
+          </span>
         </div>
       </div>
     </footer>
