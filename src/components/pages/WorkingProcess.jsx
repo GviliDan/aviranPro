@@ -8,7 +8,7 @@ const WorkingProcess = () => {
       </h1>
       <div className='flex flex-col items-center text-center gap-8 max-w-4xl'>
         <div className='flex  flex-col items-center gap-3'>
-          <span className='text-4xl font-semibold text-title'>
+          <span className='text-4xl font-semibold text-title' lang='en'>
             !She, Said, Yes
           </span>
           <span className='text-3xl font-semibold text-title'> מה עכשיו?</span>
