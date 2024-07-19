@@ -6,13 +6,17 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import { Routes, PageTitles } from '../../enums';
 import aviranLogo from '../../assets/images/aviranLogo.png';
 
 const Footer = () => {
   const navigate = useNavigate();
-
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  };
   const handleNavigation = (path) => {
     navigate(path);
+    scrollToTop();
   };
 
   return (
@@ -21,45 +25,45 @@ const Footer = () => {
       <div className='hidden md:flex flex-col items-center justify-center'>
         <div className='flex items-center space-x-2'>
           <span
-            onClick={() => handleNavigation('/about-us')}
+            onClick={() => handleNavigation(Routes.ABOUT_US)}
             className='hover:underline cursor-pointer text-title'
           >
-            ABOUT
+            {PageTitles.ABOUT_US}
           </span>
           <span className='text-title'>|</span>
           <span
-            onClick={() => handleNavigation('/working-process')}
+            onClick={() => handleNavigation(Routes.WORKING_PROCESS)}
             className='hover:underline cursor-pointer text-title'
           >
-            WORKING PROCESS
+            {PageTitles.WORKING_PROCESS}
           </span>
           <span className='text-title'>|</span>
           <span
-            onClick={() => handleNavigation('/projects')}
+            onClick={() => handleNavigation(Routes.PROJECTS)}
             className='hover:underline cursor-pointer text-title'
           >
-            PROJECTS
+            {PageTitles.PROJECTS}
           </span>
           <span className='text-title'>|</span>
           <span
-            onClick={() => handleNavigation('/destinations')}
+            onClick={() => handleNavigation(Routes.DESTINATIONS)}
             className='hover:underline cursor-pointer text-title'
           >
             DESTINATIONS
           </span>
           <span className='text-title'>|</span>
           <span
-            onClick={() => handleNavigation('/gallery')}
+            onClick={() => handleNavigation(Routes.GALLERY)}
             className='hover:underline cursor-pointer text-title'
           >
-            GALLERY
+            {PageTitles.GALLERY}
           </span>
           <span className='text-title'>|</span>
           <span
-            onClick={() => handleNavigation('/contact-us')}
+            onClick={() => handleNavigation(Routes.CONTACT_US)}
             className='hover:underline cursor-pointer text-title'
           >
-            CONTACT US
+            {PageTitles.CONTACT_US}
           </span>
         </div>
         <div className='mt-4'>
@@ -88,14 +92,11 @@ const Footer = () => {
             <FontAwesomeIcon icon={faYoutube} size='2x' />
           </a>
         </div>
-        <p className='mt-4 text-center text-title'>
-        ALL RIGHTS RESERVED TO AVIRAN ROKACHE PRODUCTION
-        </p>
       </div>
 
       {/* Mobile Footer */}
       <div className='flex flex-col items-center justify-center md:hidden text-title'>
-        <img src={aviranLogo} alt='Logo' className='h-12' />
+        <img src={aviranLogo} alt='Logo' className='h-32 w-32' />
         <div className='flex items-center space-x-4 mt-4'>
           <a
             href='https://www.instagram.com/a.r___production?igshid=MXZjZWtoZnAzeTNpaA%3D%3D&utm_source=qr'
@@ -119,18 +120,20 @@ const Footer = () => {
             <FontAwesomeIcon icon={faYoutube} size='2x' />
           </a>
         </div>
-        <p className='mt-4 text-center text-title'>
-          ALL RIGHTS RESERVED TO AVIRAN ROKACHE PRODUCTION
-        </p>
         <div className='mt-4 text-center'>
           <span
-            onClick={() => handleNavigation('/contact-us')}
+            onClick={() => handleNavigation(Routes.CONTACT_US)}
             className='block hover:underline cursor-pointer text-title'
           >
-            CONTACT US
+            {PageTitles.CONTACT_US}
           </span>
         </div>
       </div>
+
+      {/* Common Footer Text */}
+      <p className='mt-4 text-center text-title'>
+        © ALL RIGHTS RESERVED TO AVIRAN ROKACHE PRODUCTION
+      </p>
     </footer>
   );
 };

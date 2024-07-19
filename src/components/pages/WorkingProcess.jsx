@@ -3,24 +3,21 @@ import React from 'react';
 const WorkingProcess = () => {
   return (
     <div className='flex flex-col items-center justify-center min-h-screen py-12 px-4'>
-      <h1 className='text-5xl font-bold mb-12 text-title' lang='en'>
-        HOW IT WORKS?
-      </h1>
       <div className='flex flex-col items-center text-center gap-8 max-w-4xl'>
         <div className='flex  flex-col items-center gap-3'>
           <span className='text-4xl font-semibold text-title' lang='en'>
-            !She, Said, Yes
+            She Said Yes !
           </span>
-          <span className='text-3xl font-semibold text-title'> מה עכשיו?</span>
+          <span className='text-3xl font-semibold text-title' dir='rtl'> מה עכשיו?</span>
         </div>
 
-        <div className='flex flex-col items-center gap-12'>
+        <div className='flex flex-col items-center gap-12' dir='rtl'>
           <div className='flex flex-col items-center gap-4'>
             <span className='text-2xl md:text-3xl font-bold text-title'>
-              פגישה 1: אספרסו ומכירים
+              פגישה 1: אספרסו ומכירים או כוס יין, אנחנו זורמים
             </span>
             <p className='text-lg md:text-xl'>
-              או כוס יין. אנחנו זורמים. נכיר אתכם לעומק- מה חשוב לכם, מה הסטייל
+              נכיר אתכם לעומק- מה חשוב לכם, מה הסטייל
               שלכם, איך תרצו שהחתונה שלכם תראה ותרגיש? נגלה ביחד את כל אלו ועוד
               ונבין איך כולם ישתלבו בחתונה שלכם בצורה הכי מדויקת שיש.
             </p>
@@ -48,7 +45,7 @@ const WorkingProcess = () => {
             <p className='text-lg md:text-xl'>
               אף אחד לא אוהב הפתעות לא צפויות. נבנה ביחד תקציב מדויק לכל שלב
               ושלב, כדי שביום המיוחד תהיו שקטים ורגועים. תתרכזו בדבר היחיד שאתם
-              צריכים לעשות- <span className='font-bold'>ליהנות</span>.
+              צריכים לעשות - <span className='font-bold'>ליהנות.</span>
             </p>
           </div>
 

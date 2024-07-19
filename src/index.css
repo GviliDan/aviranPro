@@ -57,3 +57,37 @@ code {
     transform: translateY(-5px);
   }
 }
+
+.custom-drawer .ant-drawer-header.ant-drawer-header-close-only {
+  width: 100% !important;
+  position: relative;
+}
+.custom-drawer .ant-drawer-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  left: auto !important;
+  transform: none !important;
+}
+
+.custom-arrow {
+  font-size: 36px !important;
+  font-weight: bold !important;
+  color: white !important;
+  z-index: 1 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.custom-arrow.slick-prev {
+  left: 10px !important;
+}
+
+.custom-arrow.slick-next {
+  right: 10px !important;
+}
+
+:where(.css-dev-only-do-not-override-1uq9j6g).ant-carousel .slick-prev::after,
+:where(.css-dev-only-do-not-override-1uq9j6g).ant-carousel .slick-next::after {
+  display: none;
+}

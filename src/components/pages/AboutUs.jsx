@@ -24,13 +24,13 @@ function AboutUs() {
         id='about-us'
         className='flex flex-col items-center py-12 px-2 text-center'
       >
-        <div className='flex flex-col gap-8 max-w-4xl'>
+        <div className='flex flex-col gap-8 max-w-4xl' dir='rtl'>
           <span className='text-5xl text-title' lang='en'>
             ABOUT US
           </span>
           <div className='flex flex-col gap-4 md:text-2xl'>
-            <span>קודם כל מזל טוב!</span>
-            <span className='font-bold font-rubik'>
+            <span className='font-bold text-2xl'>קודם כל מזל טוב!</span>
+            <span className='font-bold'>
               נעים להכיר: אבירן רוקח הפקת אירועים.
             </span>
             <p>
@@ -46,7 +46,7 @@ function AboutUs() {
               אנחנו דואגים לכל פרט ולכל אורך הדרך- מהפגישה הראשונה ועד לכניסה
               לחופה, ועד לריקוד האחרון.
             </p>
-            <span>שנצא לדרך?</span>
+            <span className='font-bold text-2xl'>שנצא לדרך?</span>
           </div>
         </div>
       </div>
