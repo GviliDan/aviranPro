@@ -39,7 +39,7 @@ const Gallery = () => (
     nextArrow={<CustomNextArrow />}
   >
     {images.map((src, index) => (
-      <div className='h-[80vh]' key={index}>
+      <div className='h-[70vh] md:h-[80vh]' key={index}>
         <img
           src={src}
           alt={`Description ${index + 1}`}

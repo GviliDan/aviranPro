@@ -91,3 +91,11 @@ code {
 :where(.css-dev-only-do-not-override-1uq9j6g).ant-carousel .slick-next::after {
   display: none;
 }
+
+.backgroundShadowFull {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}
