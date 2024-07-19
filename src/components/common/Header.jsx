@@ -34,7 +34,7 @@ function Header() {
             className='absolute left-4 top-1/2 transform -translate-y-1/2'
             style={{ border: 'none', background: 'none', cursor: 'pointer' }}
           >
-            <IconHamburger className='h-8 w-8' />
+            <IconHamburger className='w-8 h-8 md:w-12 md:h-12' />
           </button>
         </div>
       </header>

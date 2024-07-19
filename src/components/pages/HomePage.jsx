@@ -14,7 +14,7 @@ const HomePage = () => {
           alt='Description'
           className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover'
         />
-        <div className='absolute bottom-4 flex justify-center w-full'>
+        <div className='absolute md:bottom-4 bottom-32 flex justify-center w-full'>
           <button onClick={scrollToAboutUs} className='scroll-down-arrow'>
             &#8595;
           </button>
