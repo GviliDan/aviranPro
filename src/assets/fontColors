@@ -1,0 +1,5 @@
+export const COLORS = {
+  title: '#6b9080',
+  line: '#ccd5ae',
+  background: '#f4f3ee',
+};
