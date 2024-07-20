@@ -15,8 +15,10 @@
     <title>React App</title>
     <script type="text/javascript">
       if (window.location.search.startsWith('?redirect=')) {
-        const redirectPath = window.location.search.split('=')[1];
-        window.history.replaceState({}, '', decodeURIComponent(redirectPath));
+        const redirectPath = decodeURIComponent(
+          window.location.search.split('=')[1]
+        );
+        window.history.replaceState({}, '', redirectPath);
       }
     </script>
   </head>
