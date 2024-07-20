@@ -45,7 +45,7 @@ const Gallery = () => {
   return (
     <Carousel
       effect='fade'
-      arrows
+      arrows={false}
       autoplay
       autoplaySpeed={2000}
       prevArrow={<CustomPrevArrow />}
