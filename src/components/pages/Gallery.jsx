@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Carousel } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import { storage, ref, listAll, getDownloadURL } from '../../firebase';
+import Loader from '../common/Loader';
 
 const Gallery = () => {
   const CustomPrevArrow = ({ className, style, onClick }) => (
@@ -21,6 +22,7 @@ const Gallery = () => {
   );
 
   const [galleryImages, setGalleryImages] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchGalleryImages = async () => {
@@ -30,10 +32,15 @@ const Gallery = () => {
         imageRefs.items.map((item) => getDownloadURL(item))
       );
       setGalleryImages(urls);
+      setLoading(false);
     };
 
     fetchGalleryImages();
   }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <Carousel

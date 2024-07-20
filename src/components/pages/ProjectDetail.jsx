@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Image } from 'antd';
 import { storage, ref, listAll, getDownloadURL } from '../../firebase';
+import Loader from '../common/Loader';
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
@@ -32,7 +33,7 @@ const ProjectDetail = () => {
   }, [projectId]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   if (!projectImages.length) {

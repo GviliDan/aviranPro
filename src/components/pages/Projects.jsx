@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import CardProject from '../common/CardProject';
 import { storage, ref, listAll, getDownloadURL } from '../../firebase';
+import Loader from '../common/Loader';
 
 function Projects() {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -25,10 +27,15 @@ function Projects() {
 
       const projectData = await Promise.all(projectPromises);
       setProjects(projectData);
+      setLoading(false);
     };
 
     fetchProjects();
   }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div className='flex flex-col items-center md:flex-row gap-8 pt-12 md:flex-wrap md:max-[800px] md:justify-center'>

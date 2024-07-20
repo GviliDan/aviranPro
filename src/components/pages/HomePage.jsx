@@ -3,10 +3,12 @@ import ArrowAnimation from '../common/ArrowAnimation';
 import CardHomePage from '../common/CardHomePage';
 import { PageTitles, Routes } from '../../enums';
 import { storage, ref, listAll, getDownloadURL } from '../../firebase';
+import Loader from '../common/Loader';
 
 const HomePage = () => {
   const [cardsImages, setCardsImages] = useState([]);
   const [heroImage, setHeroImage] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchHeroImage = async () => {
@@ -28,15 +30,24 @@ const HomePage = () => {
       setCardsImages(urls);
     };
 
-    fetchHeroImage();
-    fetchCardImages();
+    const fetchImages = async () => {
+      await fetchHeroImage();
+      await fetchCardImages();
+      setLoading(false);
+    };
+
+    fetchImages();
   }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div className='flex flex-col items-center justify-center min-h-screen'>
       <div className='relative w-full'>
         <img
-          src={heroImage}
+          src={heroImage[0]}
           alt='Description'
           className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover'
         />

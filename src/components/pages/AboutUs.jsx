@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { storage, ref, listAll, getDownloadURL } from '../../firebase';
+import Loader from '../common/Loader';
 
 function AboutUs() {
   const [heroImage, setHeroImage] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchHeroImage = async () => {
@@ -13,6 +15,7 @@ function AboutUs() {
         const firstImageUrl = await getDownloadURL(firstImageRef);
         setHeroImage([firstImageUrl]);
       }
+      setLoading(false);
     };
 
     fetchHeroImage();
@@ -22,11 +25,15 @@ function AboutUs() {
     document.getElementById('about-us').scrollIntoView({ behavior: 'smooth' });
   };
 
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
-    <div className=' flex flex-col items-center justify-center min-h-screen text-center'>
+    <div className='flex flex-col items-center justify-center min-h-screen text-center'>
       <div className='relative w-full'>
         <img
-          src={heroImage}
+          src={heroImage[0]}
           alt='Description'
           className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover'
         />

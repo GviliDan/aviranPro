@@ -99,3 +99,26 @@ code {
   width: 100%;
   bottom: 0;
 }
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #6b9080;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
