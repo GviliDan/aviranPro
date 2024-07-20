@@ -10,7 +10,7 @@ const CardProject = ({ title, image, route }) => {
 
   return (
     <div
-      className='relative w-[330px] md:w-[468px] h-[300px] border border-gray-300 cursor-pointer group'
+      className='relative w-[330px] md:w-[468px] h-[300px] cursor-pointer group shadow-2xl'
       onClick={handleClick}
     >
       <img src={image} alt={title} className='w-full h-full object-cover' />
@@ -18,7 +18,7 @@ const CardProject = ({ title, image, route }) => {
         <div className='border-2 border-white px-4 py-2'>
           <h3 className='text-xl font-bold uppercase'>{title}</h3>
         </div>
-        <div className='absolute inset-0 border border-white pointer-events-none'></div>
+        <div className='absolute inset-0 pointer-events-none'></div>
       </div>
     </div>
   );

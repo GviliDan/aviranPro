@@ -15,7 +15,10 @@ function CardHomePage({ imageSrc, text, path }) {
 
   return (
     <div className='flex flex-col'>
-      <button className='w-[330px] h-[210px]' onClick={() => handleNavigation(path)}>
+      <button
+        className='w-[330px] h-[210px] shadow-xl'
+        onClick={() => handleNavigation(path)}
+      >
         <img src={imageSrc} alt='Description' className='w-full h-full' />
       </button>
       <div className='flex items-center mt-4'>

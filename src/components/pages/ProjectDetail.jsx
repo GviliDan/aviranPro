@@ -54,7 +54,7 @@ const ProjectDetail = () => {
             <Image
               src={image}
               alt={`${projectTitle} ${index + 1}`}
-              className='object-cover '
+              className='object-cover shadow-xl'
               height={'100%'}
               width={'100%'}
             />
