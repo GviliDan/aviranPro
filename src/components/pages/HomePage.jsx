@@ -1,15 +1,42 @@
-import React from 'react';
-import homePageImage from '../../assets/images/homePageImage.webp';
+import React, { useEffect, useState } from 'react';
 import ArrowAnimation from '../common/ArrowAnimation';
 import CardHomePage from '../common/CardHomePage';
 import { PageTitles, Routes } from '../../enums';
+import { storage, ref, listAll, getDownloadURL } from '../../firebase';
 
 const HomePage = () => {
+  const [cardsImages, setCardsImages] = useState([]);
+  const [heroImage, setHeroImage] = useState([]);
+
+  useEffect(() => {
+    const fetchHeroImage = async () => {
+      const storageRef = ref(storage, 'תמונה ראשית בדף הבית');
+      const imageRefs = await listAll(storageRef);
+      if (imageRefs.items.length > 0) {
+        const firstImageRef = imageRefs.items[0];
+        const firstImageUrl = await getDownloadURL(firstImageRef);
+        setHeroImage([firstImageUrl]);
+      }
+    };
+
+    const fetchCardImages = async () => {
+      const storageRef = ref(storage, 'כרטיסיות בדף הבית');
+      const imageRefs = await listAll(storageRef);
+      const urls = await Promise.all(
+        imageRefs.items.map((item) => getDownloadURL(item))
+      );
+      setCardsImages(urls);
+    };
+
+    fetchHeroImage();
+    fetchCardImages();
+  }, []);
+
   return (
-    <div className=' flex flex-col items-center justify-center min-h-screen'>
+    <div className='flex flex-col items-center justify-center min-h-screen'>
       <div className='relative w-full'>
         <img
-          src={homePageImage}
+          src={heroImage}
           alt='Description'
           className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover'
         />
@@ -29,17 +56,17 @@ const HomePage = () => {
           </p>
           <div className='flex flex-col md:flex-row w-full md:justify-center items-center gap-8 py-12'>
             <CardHomePage
-              imageSrc={homePageImage}
+              imageSrc={cardsImages[0]}
               text={PageTitles.GALLERY}
               path={Routes.GALLERY}
             />
             <CardHomePage
-              imageSrc={homePageImage}
+              imageSrc={cardsImages[1]}
               text={PageTitles.PROJECTS}
               path={Routes.PROJECTS}
             />
             <CardHomePage
-              imageSrc={homePageImage}
+              imageSrc={cardsImages[2]}
               text={PageTitles.WORKING_PROCESS}
               path={Routes.WORKING_PROCESS}
             />

@@ -1,7 +1,23 @@
-import React from 'react';
-import homePageImage from '../../assets/images/homePageImage.webp';
+import React, { useEffect, useState } from 'react';
+import { storage, ref, listAll, getDownloadURL } from '../../firebase';
 
 function AboutUs() {
+  const [heroImage, setHeroImage] = useState([]);
+
+  useEffect(() => {
+    const fetchHeroImage = async () => {
+      const storageRef = ref(storage, 'עמוד על עצמנו');
+      const imageRefs = await listAll(storageRef);
+      if (imageRefs.items.length > 0) {
+        const firstImageRef = imageRefs.items[0];
+        const firstImageUrl = await getDownloadURL(firstImageRef);
+        setHeroImage([firstImageUrl]);
+      }
+    };
+
+    fetchHeroImage();
+  }, []);
+
   const scrollToAboutUs = () => {
     document.getElementById('about-us').scrollIntoView({ behavior: 'smooth' });
   };
@@ -10,7 +26,7 @@ function AboutUs() {
     <div className=' flex flex-col items-center justify-center min-h-screen text-center'>
       <div className='relative w-full'>
         <img
-          src={homePageImage}
+          src={heroImage}
           alt='Description'
           className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover'
         />

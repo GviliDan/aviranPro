@@ -1,53 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Carousel } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
-import homePageImage from '../../assets/images/homePageImage.webp';
-import aviranLogo from '../../assets/images/aviranLogo.png';
+import { storage, ref, listAll, getDownloadURL } from '../../firebase';
 
-const images = [
-  homePageImage,
-  aviranLogo,
-  homePageImage,
-  aviranLogo,
-  homePageImage,
-  aviranLogo,
-];
+const Gallery = () => {
+  const CustomPrevArrow = ({ className, style, onClick }) => (
+    <LeftOutlined
+      className={`${className} custom-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    />
+  );
 
-const CustomPrevArrow = ({ className, style, onClick }) => (
-  <LeftOutlined
-    className={`${className} custom-arrow`}
-    style={{ ...style }}
-    onClick={onClick}
-  />
-);
+  const CustomNextArrow = ({ className, style, onClick }) => (
+    <RightOutlined
+      className={`${className} custom-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    />
+  );
 
-const CustomNextArrow = ({ className, style, onClick }) => (
-  <RightOutlined
-    className={`${className} custom-arrow`}
-    style={{ ...style }}
-    onClick={onClick}
-  />
-);
+  const [galleryImages, setGalleryImages] = useState([]);
 
-const Gallery = () => (
-  <Carousel
-    effect='fade'
-    arrows
-    autoplay
-    autoplaySpeed={2000}
-    prevArrow={<CustomPrevArrow />}
-    nextArrow={<CustomNextArrow />}
-  >
-    {images.map((src, index) => (
-      <div className='h-[70vh] md:h-[80vh]' key={index}>
-        <img
-          src={src}
-          alt={`Description ${index + 1}`}
-          className='w-full h-full object-cover'
-        />
-      </div>
-    ))}
-  </Carousel>
-);
+  useEffect(() => {
+    const fetchGalleryImages = async () => {
+      const storageRef = ref(storage, 'עמוד גלריה');
+      const imageRefs = await listAll(storageRef);
+      const urls = await Promise.all(
+        imageRefs.items.map((item) => getDownloadURL(item))
+      );
+      setGalleryImages(urls);
+    };
+
+    fetchGalleryImages();
+  }, []);
+
+  return (
+    <Carousel
+      effect='fade'
+      arrows
+      autoplay
+      autoplaySpeed={2000}
+      prevArrow={<CustomPrevArrow />}
+      nextArrow={<CustomNextArrow />}
+    >
+      {galleryImages.map((src, index) => (
+        <div className='h-[70vh] md:h-[80vh]' key={index}>
+          <img
+            src={src}
+            alt={`Description ${index + 1}`}
+            className='w-full h-full object-cover'
+          />
+        </div>
+      ))}
+    </Carousel>
+  );
+};
 
 export default Gallery;
