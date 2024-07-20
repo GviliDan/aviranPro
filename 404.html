@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+      // Redirect all requests to index.html if not already redirected
+      if (!window.location.pathname.startsWith('/aviranPro')) {
+        var path = window.location.pathname;
+        var query = window.location.search;
+        window.location.replace('/aviranPro' + '?' + path + query);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Page Not Found</h1>
+    <p>Redirecting...</p>
+  </body>
+</html>
