@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { storage, ref, listAll, getDownloadURL } from '../../firebase';
 import Loader from '../common/Loader';
+import ArrowAnimation from '../common/ArrowAnimation';
 
 function AboutUs() {
   const [heroImage, setHeroImage] = useState([]);
@@ -21,10 +22,6 @@ function AboutUs() {
     fetchHeroImage();
   }, []);
 
-  const scrollToAboutUs = () => {
-    document.getElementById('about-us').scrollIntoView({ behavior: 'smooth' });
-  };
-
   if (loading) {
     return <Loader />;
   }
@@ -35,41 +32,39 @@ function AboutUs() {
         <img
           src={heroImage[0]}
           alt='Description'
-          className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover'
+          className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover fade-in'
         />
-        <div className='absolute bottom-4 flex justify-center w-full'>
-          <button onClick={scrollToAboutUs} className='scroll-down-arrow'>
-            &#8595;
-          </button>
-        </div>
+        <ArrowAnimation />
       </div>
       <div
         id='about-us'
-        className='flex flex-col items-center py-12 px-2 text-center'
+        className='flex flex-col items-center py-12 px-2 text-center fade-in-section'
       >
         <div className='flex flex-col gap-8 max-w-4xl' dir='rtl'>
-          <span className='text-5xl text-title' lang='en'>
+          <span className='text-5xl text-title fade-in' lang='en'>
             ABOUT US
           </span>
           <div className='flex flex-col gap-4 md:text-2xl'>
-            <span className='font-bold text-2xl'>קודם כל מזל טוב!</span>
-            <span className='font-bold'>
+            <span className='font-bold text-2xl fade-in'>קודם כל מזל טוב!</span>
+            <span className='font-bold fade-in'>
               נעים להכיר: אבירן רוקח הפקת אירועים.
             </span>
-            <p>
+            <p className='fade-in'>
               אנחנו כאן כדי לשנות את כל מה שחשבתם על ארגון ותכנון יום החתונה.
               במקום כאבי ראש, לוחות זמנים צפופים, התעסקות עם חוזים, סגירת ספקים
               ו.. אתם כבר מבינים, אנחנו חושבים שבדיוק כמו האירוע, גם ההיערכות
               אליו יכולה וצריכה להיות חוויה בפני עצמה: חוויה מרגשת, כיפית והכי
               חשוב רגועה.
             </p>
-            <span className='font-bold'>ובדיוק בשביל זה אנחנו כאן.</span>
-            <p>
+            <span className='font-bold fade-in'>
+              ובדיוק בשביל זה אנחנו כאן.
+            </span>
+            <p className='fade-in'>
               מהדברים הגדולים והחשובים ועד לפרטים הקטנים שלא זכרתם שצריכים,
               אנחנו דואגים לכל פרט ולכל אורך הדרך- מהפגישה הראשונה ועד לכניסה
               לחופה, ועד לריקוד האחרון.
             </p>
-            <span className='font-bold text-2xl'>שנצא לדרך?</span>
+            <span className='font-bold text-2xl fade-in'>שנצא לדרך?</span>
           </div>
         </div>
       </div>
