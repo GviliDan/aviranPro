@@ -4,11 +4,10 @@
     <meta charset="utf-8" />
     <title>Page Not Found</title>
     <script type="text/javascript">
-      // Redirect all requests to index.html if not already redirected
-      if (!window.location.pathname.startsWith('/aviranPro')) {
-        var path = window.location.pathname;
-        var query = window.location.search;
-        window.location.replace('/aviranPro');
+      var path = window.location.pathname;
+      var query = window.location.search;
+      if (path !== '/aviranPro/' && !path.startsWith('/aviranPro/')) {
+        window.location.replace('/aviranPro?redirect=' + encodeURIComponent(path + query));
       }
     </script>
   </head>
