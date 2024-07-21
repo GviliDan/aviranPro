@@ -14,15 +14,26 @@ function Projects() {
 
       const projectPromises = folderRefs.prefixes.map(async (folderRef) => {
         const folderName = folderRef.name;
-        const imageRefs = await listAll(folderRef);
-        const firstImageUrl = await getDownloadURL(imageRefs.items[0]);
+        const mainImageFolderRef = ref(storage, `${folderRef.fullPath}/תמונה ראשית`);
+        const imageRefs = await listAll(mainImageFolderRef);
 
-        return {
-          id: folderName,
-          title: folderName,
-          images: [firstImageUrl],
-          route: `/projects/${folderName}`
-        };
+        if (imageRefs.items.length > 0) {
+          const firstImageUrl = await getDownloadURL(imageRefs.items[0]);
+
+          return {
+            id: folderName,
+            title: folderName,
+            images: [firstImageUrl],
+            route: `/projects/${folderName}`
+          };
+        } else {
+          return {
+            id: folderName,
+            title: folderName,
+            images: ['/path/to/default/image.jpg'],  
+            route: `/projects/${folderName}`
+          };
+        }
       });
 
       const projectData = await Promise.all(projectPromises);
