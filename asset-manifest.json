@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aviranPro/static/css/main.89744a0d.css",
-    "main.js": "/aviranPro/static/js/main.360ef29d.js",
+    "main.css": "/aviranPro/static/css/main.e9133097.css",
+    "main.js": "/aviranPro/static/js/main.89f641e5.js",
     "static/js/453.f5820582.chunk.js": "/aviranPro/static/js/453.f5820582.chunk.js",
     "static/media/aboutUsHero.jpeg": "/aviranPro/static/media/aboutUsHero.1b365a6580d73c553274.jpeg",
     "static/media/video1.mp4": "/aviranPro/static/media/video1.30f46a55ce909eb76c42.mp4",
@@ -23,12 +23,12 @@
     "static/media/Assistant-ExtraLight.ttf": "/aviranPro/static/media/Assistant-ExtraLight.f39834d821bffe9e8953.ttf",
     "static/media/aviranLogo.png": "/aviranPro/static/media/aviranLogo.eea126718ff14264a3d0.png",
     "index.html": "/aviranPro/index.html",
-    "main.89744a0d.css.map": "/aviranPro/static/css/main.89744a0d.css.map",
-    "main.360ef29d.js.map": "/aviranPro/static/js/main.360ef29d.js.map",
+    "main.e9133097.css.map": "/aviranPro/static/css/main.e9133097.css.map",
+    "main.89f641e5.js.map": "/aviranPro/static/js/main.89f641e5.js.map",
     "453.f5820582.chunk.js.map": "/aviranPro/static/js/453.f5820582.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89744a0d.css",
-    "static/js/main.360ef29d.js"
+    "static/css/main.e9133097.css",
+    "static/js/main.89f641e5.js"
   ]
 }
