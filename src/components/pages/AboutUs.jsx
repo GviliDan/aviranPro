@@ -1,6 +1,7 @@
 import React from 'react';
 import ArrowAnimation from '../common/ArrowAnimation';
 import aboutUsHero from '../../assets/images/aboutUsHero.jpeg';
+import aviranLogo from '../../assets/images/aviranLogo.png';
 
 function AboutUs() {
   return (
@@ -11,6 +12,13 @@ function AboutUs() {
           alt='Description'
           className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover fade-in'
         />
+        <div className='absolute top-7 left-1/2 transform -translate-x-1/2 md:hidden'>
+          <img
+            src={aviranLogo}
+            alt='Description'
+            className='w-36 h-36 fade-in-scale-up-logo '
+          />
+        </div>
         <ArrowAnimation />
       </div>
       <div
