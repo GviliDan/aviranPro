@@ -24,7 +24,7 @@ function Header() {
           style={{ cursor: 'pointer' }}
         >
           <h1 lang='en' className='text-xl md:text-5xl font-medium text-title pl-3'>
-            Aviran Rokache Productions
+            Aviran Rokache Production
           </h1>
           <button
             onClick={(e) => {

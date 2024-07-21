@@ -4,23 +4,13 @@ import CardHomePage from '../common/CardHomePage';
 import { PageTitles, Routes } from '../../enums';
 import { storage, ref, listAll, getDownloadURL } from '../../firebase';
 import Loader from '../common/Loader';
+import video1 from '../../assets/videos/video1.mp4'; 
 
 const HomePage = () => {
   const [cardsImages, setCardsImages] = useState([]);
-  const [heroImage, setHeroImage] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchHeroImage = async () => {
-      const storageRef = ref(storage, 'תמונה ראשית בדף הבית');
-      const imageRefs = await listAll(storageRef);
-      if (imageRefs.items.length > 0) {
-        const firstImageRef = imageRefs.items[0];
-        const firstImageUrl = await getDownloadURL(firstImageRef);
-        setHeroImage([firstImageUrl]);
-      }
-    };
-
     const fetchCardImages = async () => {
       const storageRef = ref(storage, 'כרטיסיות בדף הבית');
       const imageRefs = await listAll(storageRef);
@@ -30,13 +20,8 @@ const HomePage = () => {
       setCardsImages(urls);
     };
 
-    const fetchImages = async () => {
-      await fetchHeroImage();
-      await fetchCardImages();
-      setLoading(false);
-    };
-
-    fetchImages();
+    fetchCardImages();
+    setLoading(false);
   }, []);
 
   if (loading) {
@@ -46,11 +31,16 @@ const HomePage = () => {
   return (
     <div className='flex flex-col items-center justify-center min-h-screen'>
       <div className='relative w-full'>
-        <img
-          src={heroImage[0]}
-          alt='Description'
+        <video
+          src={video1}
+          autoPlay
+          muted={true} 
+          loop
+          playsInline
           className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover fade-in'
+          onLoadedMetadata={(e) => e.target.play()} // Ensure video plays as soon as it can
         />
+
         <ArrowAnimation />
       </div>
       <div
@@ -59,7 +49,7 @@ const HomePage = () => {
       >
         <div className='flex flex-col gap-4 md:text-2xl md:max-w-4xl'>
           <span className='text-3xl text-title fade-in'>השראה</span>
-          <p className='fade-in'>
+          <p className='fade-in' dir='rtl'>
             נוגעת בכל פרט, מהבחירות האסתטיות של עיצוב המקום ועד למילים החמות של
             הנדרים. היא מזכירה לנו שהחתונה היא לא רק אירוע, אלא תחילתו של מסע
             משותף, מסע של בניית זיכרונות, התגברות על מכשולים וחגיגת כל רגע קטן

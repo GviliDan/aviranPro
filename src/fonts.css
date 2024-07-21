@@ -1,62 +1,62 @@
 @font-face {
     font-family: 'Heebo';
-    src: url('/src/fonts/Heebo-Thin.ttf') format('truetype');
+    src: url('/src/assets/fonts/Heebo-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Heebo';
-    src: url('/src/fonts/Heebo-ExtraLight.ttf') format('truetype');
+    src: url('/src/assets/fonts/Heebo-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Heebo';
-    src: url('/src/fonts/Heebo-Light.ttf') format('truetype');
+    src: url('/src/assets/fonts/Heebo-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Heebo';
-    src: url('/src/fonts/Heebo-Regular.ttf') format('truetype');
+    src: url('/src/assets/fonts/Heebo-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Heebo';
-    src: url('/src/fonts/Heebo-Medium.ttf') format('truetype');
+    src: url('/src/assets/fonts/Heebo-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Heebo';
-    src: url('/src/fonts/Heebo-SemiBold.ttf') format('truetype');
+    src: url('/src/assets/fonts/Heebo-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Heebo';
-    src: url('/src/fonts/Heebo-Bold.ttf') format('truetype');
+    src: url('/src/assets/fonts/Heebo-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Heebo';
-    src: url('/src/fonts/Heebo-ExtraBold.ttf') format('truetype');
+    src: url('/src/assets/fonts/Heebo-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Heebo';
-    src: url('/src/fonts/Heebo-Black.ttf') format('truetype');
+    src: url('/src/assets/fonts/Heebo-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
@@ -64,49 +64,49 @@
 /* Assistant Font Faces */
 @font-face {
     font-family: 'Assistant';
-    src: url('/src/fonts/Assistant-ExtraLight.ttf') format('truetype');
+    src: url('/src/assets/fonts/Assistant-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Assistant';
-    src: url('/src/fonts/Assistant-Light.ttf') format('truetype');
+    src: url('/src/assets/fonts/Assistant-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Assistant';
-    src: url('/src/fonts/Assistant-Regular.ttf') format('truetype');
+    src: url('/src/assets/fonts/Assistant-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Assistant';
-    src: url('/src/fonts/Assistant-Medium.ttf') format('truetype');
+    src: url('/src/assets/fonts/Assistant-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Assistant';
-    src: url('/src/fonts/Assistant-SemiBold.ttf') format('truetype');
+    src: url('/src/assets/fonts/Assistant-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Assistant';
-    src: url('/src/fonts/Assistant-Bold.ttf') format('truetype');
+    src: url('/src/assets/fonts/Assistant-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Assistant';
-    src: url('/src/fonts/Assistant-ExtraBold.ttf') format('truetype');
+    src: url('/src/assets/fonts/Assistant-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
