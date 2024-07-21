@@ -1,36 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { storage, ref, listAll, getDownloadURL } from '../../firebase';
-import Loader from '../common/Loader';
+import React from 'react';
 import ArrowAnimation from '../common/ArrowAnimation';
+import aboutUsHero from '../../assets/images/aboutUsHero.jpeg';
 
 function AboutUs() {
-  const [heroImage, setHeroImage] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchHeroImage = async () => {
-      const storageRef = ref(storage, 'עמוד על עצמנו');
-      const imageRefs = await listAll(storageRef);
-      if (imageRefs.items.length > 0) {
-        const firstImageRef = imageRefs.items[0];
-        const firstImageUrl = await getDownloadURL(firstImageRef);
-        setHeroImage([firstImageUrl]);
-      }
-      setLoading(false);
-    };
-
-    fetchHeroImage();
-  }, []);
-
-  if (loading) {
-    return <Loader />;
-  }
-
   return (
     <div className='flex flex-col items-center justify-center min-h-screen text-center'>
       <div className='relative w-full'>
         <img
-          src={heroImage[0]}
+          src={aboutUsHero}
           alt='Description'
           className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover fade-in'
         />
