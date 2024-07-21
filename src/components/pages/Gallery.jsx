@@ -1,26 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'antd';
-import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import { storage, ref, listAll, getDownloadURL } from '../../firebase';
 import Loader from '../common/Loader';
 
 const Gallery = () => {
-  const CustomPrevArrow = ({ className, style, onClick }) => (
-    <LeftOutlined
-      className={`${className} custom-arrow`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
-  );
-
-  const CustomNextArrow = ({ className, style, onClick }) => (
-    <RightOutlined
-      className={`${className} custom-arrow`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
-  );
-
   const [galleryImages, setGalleryImages] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -45,11 +28,9 @@ const Gallery = () => {
   return (
     <Carousel
       effect='fade'
-      arrows={false}
+      arrows
       autoplay
       autoplaySpeed={2000}
-      prevArrow={<CustomPrevArrow />}
-      nextArrow={<CustomNextArrow />}
     >
       {galleryImages.map((src, index) => (
         <div className='h-[70vh] md:h-[80vh]' key={index}>
