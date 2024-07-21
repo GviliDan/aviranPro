@@ -10,7 +10,7 @@ function AboutUs() {
         <img
           src={aboutUsHero}
           alt='Description'
-          className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover fade-in'
+          className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover'
         />
         <div className='absolute top-7 left-1/2 transform -translate-x-1/2 md:hidden'>
           <img
