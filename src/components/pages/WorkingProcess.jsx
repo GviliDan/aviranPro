@@ -16,9 +16,12 @@ const WorkingProcess = () => {
         <div className='flex flex-col items-center gap-12' dir='rtl'>
           <div className='flex flex-col items-center gap-4'>
             <span className='text-2xl md:text-3xl font-bold text-title fade-in'>
-              פגישה 1: אספרסו ומכירים או כוס יין, אנחנו זורמים
+              פגישה 1: אספרסו ומכירים
             </span>
-            <p className='text-lg md:text-xl fade-in'>
+            <span className='text-xl md:text-3xl font-bold text-title fade-in'>
+              או כוס יין, אנחנו זורמים
+            </span>
+            <p className='text-lg md:text-lg fade-in'>
               נכיר אתכם לעומק- מה חשוב לכם, מה הסטייל שלכם, איך תרצו שהחתונה שלכם תראה ותרגיש? נגלה ביחד את כל אלו ועוד ונבין איך כולם ישתלבו בחתונה שלכם בצורה הכי מדויקת שיש.
             </p>
           </div>
