@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faInstagram,
   faFacebook,
-  faYoutube,
+  faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import { Routes, PageTitles } from '../../enums';
@@ -85,11 +85,11 @@ const Footer = () => {
             <FontAwesomeIcon icon={faFacebook} size='2x' />
           </a>
           <a
-            href='https://www.youtube.com'
+            href='https://wa.me/+972525167979'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <FontAwesomeIcon icon={faYoutube} size='2x' />
+            <FontAwesomeIcon icon={faWhatsapp} size='2x' />
           </a>
         </div>
       </div>
@@ -111,6 +111,13 @@ const Footer = () => {
             rel='noopener noreferrer'
           >
             <FontAwesomeIcon icon={faFacebook} size='2x' />
+          </a>
+          <a
+            href='https://wa.me/+972525167979'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FontAwesomeIcon icon={faWhatsapp} size='2x' />
           </a>
         </div>
         <div className='mt-4 text-center'>
