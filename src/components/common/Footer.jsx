@@ -106,18 +106,11 @@ const Footer = () => {
             <FontAwesomeIcon icon={faInstagram} size='2x' />
           </a>
           <a
-            href='https://www.facebook.com'
+            href='https://www.facebook.com/aviran.rokache?mibextid=ZbWKwL'
             target='_blank'
             rel='noopener noreferrer'
           >
             <FontAwesomeIcon icon={faFacebook} size='2x' />
-          </a>
-          <a
-            href='https://www.youtube.com'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FontAwesomeIcon icon={faYoutube} size='2x' />
           </a>
         </div>
         <div className='mt-4 text-center'>
