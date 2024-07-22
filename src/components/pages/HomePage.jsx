@@ -4,7 +4,8 @@ import CardHomePage from '../common/CardHomePage';
 import { PageTitles, Routes } from '../../enums';
 import { storage, ref, listAll, getDownloadURL } from '../../firebase';
 import Loader from '../common/Loader';
-import video1 from '../../assets/videos/video1.mp4'; 
+import heroVideo from '../../assets/videos/heroVideo.mov'; 
+import Video from '../common/Video'; 
 
 const HomePage = () => {
   const [cardsImages, setCardsImages] = useState([]);
@@ -30,17 +31,14 @@ const HomePage = () => {
 
   return (
     <div className='flex flex-col items-center justify-center min-h-screen'>
-      <div className='relative w-full'>
-        <video
-          src={video1}
-          autoPlay
-          muted={true} 
-          loop
-          playsInline
-          className='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover fade-in'
-          onLoadedMetadata={(e) => e.target.play()} // Ensure video plays as soon as it can
+      <div className='relative w-full object-cover'>
+        <Video
+          url={heroVideo}
+          autoPlay={true}
+          displayMuteButton={true}
+          customClass='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover fade-in'
+          loader={true}
         />
-
         <ArrowAnimation />
       </div>
       <div

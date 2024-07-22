@@ -4,6 +4,7 @@ import { IconHamburger } from '../../assets/icons/index';
 import DrawerMenu from './DrawerMenu';
 
 function Header() {
+  
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
@@ -23,7 +24,7 @@ function Header() {
           className='w-full h-[62px] md:h-[85px] flex justify-center items-center relative'
           style={{ cursor: 'pointer' }}
         >
-          <h1 lang='en' className='text-xl md:text-5xl font-medium text-title pl-3'>
+          <h1 className='text-xl md:text-5xl font-medium text-title pl-3'>
             Aviran Rokache Production
           </h1>
           <button
