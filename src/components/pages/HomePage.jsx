@@ -35,7 +35,7 @@ const HomePage = () => {
         <Video
           url={heroVideo}
           autoPlay={true}
-          displayMuteButton={true}
+          // displayMuteButton={true}
           customClass='w-full h-[calc(100vh-62px)] md:h-[calc(100vh-85px)] object-cover fade-in'
           loader={true}
         />
