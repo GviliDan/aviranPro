@@ -1,4 +1,5 @@
 export const Routes = Object.freeze({
+  HOME: '/',
   ABOUT_US: '/about-us',
   WORKING_PROCESS: '/working-process',
   PROJECTS: '/projects',

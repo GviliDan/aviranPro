@@ -67,7 +67,12 @@ const Footer = () => {
           </span>
         </div>
         <div className='mt-4'>
-          <img src={aviranLogo} alt='Logo' className='h-24' />
+          <img
+            src={aviranLogo}
+            alt='Logo'
+            className='h-24 cursor-pointer'
+            onClick={() => handleNavigation(Routes.HOME)}
+          />
         </div>
         <div className='flex items-center space-x-4 mt-4 text-title'>
           <a
@@ -96,7 +101,12 @@ const Footer = () => {
 
       {/* Mobile Footer */}
       <div className='flex flex-col items-center justify-center md:hidden text-title'>
-        <img src={aviranLogo} alt='Logo' className='h-32 w-32' />
+        <img
+          src={aviranLogo}
+          alt='Logo'
+          className='h-32 w-32'
+          onClick={() => handleNavigation(Routes.HOME)}
+        />
         <div className='flex items-center space-x-4 mt-4'>
           <a
             href='https://www.instagram.com/a.r___production?igshid=MXZjZWtoZnAzeTNpaA%3D%3D&utm_source=qr'
