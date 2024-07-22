@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/aviranPro/static/css/main.06d447fe.css",
-    "main.js": "/aviranPro/static/js/main.6bd5909a.js",
+    "main.js": "/aviranPro/static/js/main.65c50190.js",
     "static/js/453.f5820582.chunk.js": "/aviranPro/static/js/453.f5820582.chunk.js",
-    "static/media/heroVideo.mov": "/aviranPro/static/media/heroVideo.953ba0d37ab854ab46ce.mov",
+    "static/media/heroVideo.mov": "/aviranPro/static/media/heroVideo.6090203311e32f82bf24.mov",
     "static/media/aboutUsHero.jpeg": "/aviranPro/static/media/aboutUsHero.1b365a6580d73c553274.jpeg",
     "static/media/Heebo-Black.ttf": "/aviranPro/static/media/Heebo-Black.b1975228ae0fed052ca8.ttf",
     "static/media/Heebo-ExtraBold.ttf": "/aviranPro/static/media/Heebo-ExtraBold.52e60a026c110bd2065a.ttf",
@@ -24,11 +24,11 @@
     "static/media/aviranLogo.png": "/aviranPro/static/media/aviranLogo.eea126718ff14264a3d0.png",
     "index.html": "/aviranPro/index.html",
     "main.06d447fe.css.map": "/aviranPro/static/css/main.06d447fe.css.map",
-    "main.6bd5909a.js.map": "/aviranPro/static/js/main.6bd5909a.js.map",
+    "main.65c50190.js.map": "/aviranPro/static/js/main.65c50190.js.map",
     "453.f5820582.chunk.js.map": "/aviranPro/static/js/453.f5820582.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.06d447fe.css",
-    "static/js/main.6bd5909a.js"
+    "static/js/main.65c50190.js"
   ]
 }
