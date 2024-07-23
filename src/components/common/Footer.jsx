@@ -46,13 +46,6 @@ const Footer = () => {
           </span>
           <span className='text-title'>|</span>
           <span
-            onClick={() => handleNavigation(Routes.DESTINATIONS)}
-            className='hover:underline cursor-pointer text-title'
-          >
-            DESTINATIONS
-          </span>
-          <span className='text-title'>|</span>
-          <span
             onClick={() => handleNavigation(Routes.GALLERY)}
             className='hover:underline cursor-pointer text-title'
           >
