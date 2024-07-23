@@ -43,7 +43,7 @@ const HomePage = () => {
       </div>
       <div
         id='about-us'
-        className='flex flex-col items-center pt-12 px-2 text-center fade-in-section'
+        className='flex flex-col items-center pt-12 md:px-2 px-6 text-center fade-in-section'
       >
         <div className='flex flex-col gap-4 md:text-2xl md:max-w-4xl'>
           <span className='text-3xl text-title fade-in'>השראה</span>
@@ -53,7 +53,7 @@ const HomePage = () => {
             משותף, מסע של בניית זיכרונות, התגברות על מכשולים וחגיגת כל רגע קטן
             וגדול יחד.
           </p>
-          <div className='flex flex-col md:flex-row w-full md:justify-center items-center gap-8 py-12'>
+          <div className='flex flex-col md:flex-row w-full md:justify-center items-center gap-12 py-12'>
             <CardHomePage
               imageSrc={cardsImages[0]}
               text={PageTitles.GALLERY}
