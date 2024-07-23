@@ -13,7 +13,7 @@ import ProjectDetail from './components/pages/ProjectDetail';
 
 function App() {
   return (
-    <Router basename='/aviranPro'>
+    <Router >
       <Header />
 
       <main className='mt-[62px] md:mt-[85px]'>
