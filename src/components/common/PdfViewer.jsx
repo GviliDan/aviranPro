@@ -1,12 +1,12 @@
 import React from 'react';
-import samplePdf from '../../assets/pdf/aviranPdf.pdf';
 
 const PDFViewer = () => {
   return (
     <div className="w-screen h-screen">
       <iframe
-        src={samplePdf}
-        className="w-full h-full border-none"
+        src="/aviranPdf.pdf" 
+        className="w-full h-full"
+        style={{ border: 'none' }}
         title="PDF Viewer"
       />
     </div>
