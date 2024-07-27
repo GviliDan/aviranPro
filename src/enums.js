@@ -5,6 +5,7 @@ export const Routes = Object.freeze({
   PROJECTS: '/projects',
   CONTACT_US: '/contact-us',
   GALLERY: '/gallery',
+  PRESENTATION: '/presentation',
 });
 
 export const PageTitles = Object.freeze({
@@ -13,4 +14,5 @@ export const PageTitles = Object.freeze({
   PROJECTS: 'PROJECTS',
   CONTACT_US: 'CONTACT US',
   GALLERY: 'GALLERY',
+  PRESENTATION: 'PRESENTATION',
 });

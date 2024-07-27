@@ -43,6 +43,9 @@ const DrawerMenu = ({ open, onClose }) => {
         <button onClick={() => handleNavigation(Routes.GALLERY)}>
           {PageTitles.GALLERY}
         </button>
+        <button onClick={() => handleNavigation(Routes.PRESENTATION)}>
+          {PageTitles.PRESENTATION}
+        </button>
       </div>
     </Drawer>
   );

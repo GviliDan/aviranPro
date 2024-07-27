@@ -1,23 +1,7 @@
 import { FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
-import React, { useEffect, useState } from 'react';
-// import { storage, ref, listAll, getDownloadURL } from '../../firebase';
+import React from 'react';
 
 const ContactUs = () => {
-  // const [image, setImage] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchImage = async () => {
-  //     const storageRef = ref(storage, '/צור קשר');
-  //     const imageRefs = await listAll(storageRef);
-  //     if (imageRefs.items.length > 0) {
-  //       const firstImageRef = imageRefs.items[0];
-  //       const firstImageUrl = await getDownloadURL(firstImageRef);
-  //       setImage([firstImageUrl]);
-  //     }
-  //   };
-  //   fetchImage();
-  // }, []);
-
   return (
     <div className='flex flex-col items-center justify-center px-4 py-24'>
       <h1 className='text-5xl font-bold mb-12 text-title' lang='en'>
@@ -52,12 +36,6 @@ const ContactUs = () => {
             </a>
           </div>
         </div>
-
-        {/* <div className='w-full border-t border-line'></div> */}
-
-        {/* <div className='flex justify-center items-center'>
-          <img src={image} alt='Logo' className='h-48 w-48' />
-        </div> */}
       </div>
     </div>
   );

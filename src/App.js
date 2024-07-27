@@ -8,6 +8,7 @@ import ContactUs from './components/pages/ContactUs';
 import Gallery from './components/pages/Gallery';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
+import PdfViewer from './components/common/PdfViewer';
 import Projects from './components/pages/Projects';
 import ProjectDetail from './components/pages/ProjectDetail';
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/projects/:projectId' element={<ProjectDetail />} />
+          <Route path='/presentation' element={<PdfViewer />} />
         </Routes>
       </main>
 
